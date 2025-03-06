@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appreciation for William Cinence</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            text-align: center;
+            padding: 50px;
+            color: white;
+            overflow: hidden;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            color: #1e88e5;
+            font-size: 45px;
+        }
+        .date {
+            color: #333;
+            font-style: italic;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 26px;
+            margin-top: 30px;
+            color: #333;
+            font-weight: bold;
+        }
+        .sender {
+            font-size: 20px;
+            color: #1e88e5;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .photo {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid #1e88e5;
+            margin-bottom: 30px;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .chem-symbols {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .chem-symbol {
+            background: #1e88e5;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+        .chem-symbol:hover {
+            transform: scale(1.3);
+        }
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .floating-elements span {
+            position: absolute;
+            font-size: 35px;
+            color: rgba(255, 255, 255, 0.7);
+            animation: floatUp 7s infinite linear;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(100vh); }
+            100% { transform: translateY(-10vh); }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements"></div>
+    <div class="card">
+        <img src="your-image-name.jpg" alt="William Cinence" class="photo">
+        <h1>Congratulations, Sir William Cinence!</h1>
+        <p class="date">Date: February 4, 2025</p>
+        <p class="message">Your hard work and dedication in teaching Chemistry have truly inspired us! We appreciate and love you as our teacher, and we are so proud of your promotion. May your passion for education continue to shine. Wishing you continued success in your journey!</p>
+        <p class="sender">From: Bahay ni JV Tribe</p>
+        <div class="chem-symbols">
+            <div class="chem-symbol">H</div>
+            <div class="chem-symbol">O</div>
+            <div class="chem-symbol">C</div>
+            <div class="chem-symbol">N</div>
+        </div>
+    </div>
+    
+    <script>
+        function createFloatingElements() {
+            const container = document.querySelector('.floating-elements');
+            const elements = ['H₂O', 'CO₂', 'NaCl', 'O₂', 'C₆H₁₂O₆'];
+            for (let i = 0; i < 20; i++) {
+                let span = document.createElement('span');
+                span.textContent = elements[Math.floor(Math.random() * elements.length)];
+                span.style.left = Math.random() * 100 + 'vw';
+                span.style.animationDuration = Math.random() * 6 + 4 + 's';
+                container.appendChild(span);
+            }
+        }
+        createFloatingElements();
+    </script>
+</body>
+</html>
