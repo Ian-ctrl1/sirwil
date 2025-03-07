@@ -3,135 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appreciation for William Cinence</title>
+    <title>Appreciation for William Cinense</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
+
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
             text-align: center;
             padding: 50px;
             color: white;
+            margin: 0;
             overflow: hidden;
+            animation: animatedBackground 10s linear infinite alternate;
         }
         .card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
             border-radius: 20px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             display: inline-block;
-            max-width: 900px;
+            max-width: 850px;
             text-align: center;
-            position: relative;
-            animation: fadeIn 1.5s ease-in-out;
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: slideIn 1.5s ease-in-out;
         }
         h1 {
-            color: #1e88e5;
-            font-size: 45px;
-        }
-        .date {
-            color: #333;
-            font-style: italic;
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
-        .message {
-            font-size: 26px;
-            margin-top: 30px;
-            color: #333;
-            font-weight: bold;
-        }
-        .sender {
-            font-size: 20px;
-            color: #1e88e5;
-            margin-top: 30px;
-            font-weight: bold;
+            color: #ffeb3b;
+            font-size: 50px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            animation: glow 1.5s infinite alternate;
         }
         .photo {
-            width: 500px;
-            height: 500px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             object-fit: cover;
-            border: 10px solid #1e88e5;
-            margin-bottom: 30px;
+            border: 6px solid #ffeb3b;
+            margin-bottom: 20px;
             animation: zoomIn 1.5s ease-in-out;
         }
         .chem-symbols {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            gap: 20px;
             margin-top: 30px;
         }
         .chem-symbol {
-            background: #1e88e5;
+            background: rgba(255, 255, 255, 0.2);
             color: white;
-            font-size: 32px;
+            font-size: 80px;
             font-weight: bold;
-            padding: 22px;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            transform: scale(1);
-            transition: transform 0.3s;
+            padding: 50px 60px;
+            border-radius: 25px;
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(8px);
+            animation: floatUp 3s infinite alternate ease-in-out;
         }
         .chem-symbol:hover {
-            transform: scale(1.3);
+            transform: scale(1.6);
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 25px white;
         }
-        .floating-elements {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
+        .chem-image-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
-        .floating-elements span {
-            position: absolute;
-            font-size: 35px;
-            color: rgba(255, 255, 255, 0.7);
-            animation: floatUp 7s infinite linear;
+        .chem-image {
+            width: 700px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            display: none;
+            animation: fadeIn 1s ease-in-out;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
+
+        @keyframes animatedBackground {
+            0% { background: linear-gradient(135deg, #00c6ff, #0072ff); }
+            50% { background: linear-gradient(135deg, #ff7eb3, #ff758c); }
+            100% { background: linear-gradient(135deg, #00c6ff, #0072ff); }
         }
-        @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.5); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes floatUp {
-            0% { transform: translateY(100vh); }
-            100% { transform: translateY(-10vh); }
-        }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes zoomIn { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        @keyframes glow { from { text-shadow: 0px 0px 10px #ffeb3b; } to { text-shadow: 0px 0px 25px #ffeb3b; } }
+        @keyframes floatUp { from { transform: translateY(10px); } to { transform: translateY(-10px); } }
     </style>
 </head>
 <body>
-    <div class="floating-elements"></div>
     <div class="card">
         <img src="your-image-name.jpg" alt="William Cinense" class="photo">
-        <h1>Congratulations, Sir William Cinense!</h1>
+        
+        <h1>🎉 Congratulations, Sir William Cinense!, Teacher 3! 🎉</h1>
         <p class="date">Date: February 4, 2025</p>
-        <p class="message">Your hard work and dedication in teaching Chemistry have truly inspired us! We appreciate and love you as our teacher, and we are so proud of your promotion. May your passion for education continue to shine. Wishing you continued success in your journey!</p>
+        <p class="message">Super deserve sir!, we love you so much, salamat sa pagiging papa, tito at teacher samin.</p>
         <p class="sender">From: Bahay ni JV Tribe</p>
+
         <div class="chem-symbols">
-            <div class="chem-symbol">H</div>
-            <div class="chem-symbol">2</div>
-            <div class="chem-symbol">O</div>
+            <div class="chem-symbol" onclick="showImage('H')">H</div>
+            <div class="chem-symbol" onclick="showImage('2')">2</div>
+            <div class="chem-symbol" onclick="showImage('O')">O</div>
+        </div>
+
+        <div class="chem-image-container">
+            <img id="imageH" class="chem-image" src="h-image.jpg" alt="H Image">
+            <img id="image2" class="chem-image" src="2-image.jpg" alt="2 Image">
+            <img id="imageO" class="chem-image" src="o-image.jpg" alt="O Image">
         </div>
     </div>
-    
+
     <script>
-        function createFloatingElements() {
-            const container = document.querySelector('.floating-elements');
-            const elements = ['H₂O', 'CO₂', 'NaCl', 'O₂', 'C₆H₁₂O₆'];
-            for (let i = 0; i < 20; i++) {
-                let span = document.createElement('span');
-                span.textContent = elements[Math.floor(Math.random() * elements.length)];
-                span.style.left = Math.random() * 100 + 'vw';
-                span.style.animationDuration = Math.random() * 6 + 4 + 's';
-                container.appendChild(span);
+        function showImage(letter) {
+            document.getElementById("imageH").style.display = "none";
+            document.getElementById("image2").style.display = "none";
+            document.getElementById("imageO").style.display = "none";
+
+            if (letter === "H") {
+                document.getElementById("imageH").style.display = "block";
+            } else if (letter === "2") {
+                document.getElementById("image2").style.display = "block";
+            } else if (letter === "O") {
+                document.getElementById("imageO").style.display = "block";
             }
         }
-        createFloatingElements();
     </script>
 </body>
 </html>
